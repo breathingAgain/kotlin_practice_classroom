@@ -3,27 +3,17 @@ fun main(args: Array<String>) {
     sol1(numbers)
     println("\n")
     sol2(numbers)
-    println("\n")
-    sol3(numbers)
-
 }
 fun sol1(numbers: List<Int>){
-    for(item: Int in numbers){
-        if(item % 2 == 1)
-            print("$item ")
+    numbers.forEach{
+        if (it % 2 == 1)
+            print("$it ")
     }
 }
-
 fun sol2(numbers: List<Int>){
-    for(item: Int in numbers){
-        if(item % 3 != 0)
-            print("$item ")
+    numbers.forEach{
+        if (it % 3 != 0)
+            print("$it ")
     }
 }
 
-fun sol3(numbers: List<Int>){
-    for(i in numbers.indices){
-        if(numbers[i] % (i+1) == 0)
-            print("${numbers[i]} ")
-    }
-}
